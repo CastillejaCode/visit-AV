@@ -1,7 +1,5 @@
 import "./globals.css";
-import { Lora } from "next/font/google";
-
-const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
+import { lora, rubik } from "../public/fonts";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={lora.variable}>
+    <html lang="en" className={`${lora.variable} ${rubik.variable}`}>
       <body>{children}</body>
     </html>
   );
